@@ -16,6 +16,7 @@ class CreatePlantTypesTable extends Migration
         Schema::create('plant_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('photo')->nullable();
             $table->integer('is_yearling');
             $table->timestamps();
         });

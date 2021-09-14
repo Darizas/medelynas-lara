@@ -125,8 +125,8 @@ class PlantTypeController extends Controller
     public function updatePhoto(Request $request, PlantType $plantType)
     {
         if($plantType->photo != null){
-            unlink(public_path('/plantPhotos/big'.$plantType->photo));
-            unlink(public_path('/plantPhotos/small'.$plantType->photo));
+            unlink(public_path('/plantPhotos/big/'.$plantType->photo));
+            unlink(public_path('/plantPhotos/small/'.$plantType->photo));
         }
         $plantType->photo = null;
         $plantType->save();
